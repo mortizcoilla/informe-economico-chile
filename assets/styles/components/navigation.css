@@ -1,0 +1,20 @@
+.nav-menu {
+    background-color: var(--color-background);
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    color: var(--color-primary);
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+  }

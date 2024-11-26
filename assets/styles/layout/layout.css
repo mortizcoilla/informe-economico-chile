@@ -1,0 +1,141 @@
+/* 1. Estructura principal */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 2. Barra lateral */
+.sidebar {
+  width: 250px;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-background);
+  text-align: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  color: var(--color-background);
+  padding: 0.5rem 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+/* 3. Contenido principal */
+.main-content {
+  flex-grow: 1;
+  margin-left: 250px;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.main-container {
+  padding-top: 20px;
+  padding-bottom: 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 2%;
+  flex-grow: 1;
+}
+
+.sub_page {
+  margin-bottom: 2rem;
+}
+
+/* 4. Estilos de los iconos sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0.25rem;
+}
+
+/* 5. Diseño de dos columnas */
+.two-column-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.column-left,
+.column-right {
+  width: 48%; /* Cambiado a 48% para dar un pequeño espacio entre columnas */
+  padding: 0 1%;
+}
+
+.dropdown-container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* 6. Estilos responsivos */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .column-left,
+  .column-right {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .column-right {
+    margin-top: 1rem;
+  }
+}
